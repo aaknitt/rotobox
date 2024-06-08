@@ -755,5 +755,5 @@ void gdl90_escape_message_for_tx(gdl_message_t *rawMsg, gdl_message_escaped_t *e
     //Add the end flag byte back in since we skipped it in the loop (don't want to escape it)
     escapedMsg->data[paddedIndex++] = GDL90_FLAG_BYTE;
     // Update the length of our now escaped message
-    escapedMsg->length = paddedIndex - 1;
+    escapedMsg->length = paddedIndex;
 }
